@@ -5,3 +5,7 @@ require("core.plugin_config")
 -- settings
 
 vim.wo.number = true
+
+
+
+
