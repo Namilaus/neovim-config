@@ -1,6 +1,6 @@
 require("mason").setup()
 require("mason-lspconfig").setup({
-	ensure_installed = {"lua_ls","rust_analyzer","tsserver","clangd","omnisharp_mono"}
+	ensure_installed = {"lua_ls","rust_analyzer","tsserver","clangd","omnisharp_mono","jedi_language_server"}
 })
 
 vim.keymap.set('n', 'K', vim.lsp.buf.hover, { silent = true })
@@ -23,4 +23,6 @@ require("lspconfig").omnisharp_mono.setup {
 }
 
 
-
+require("lspconfig").jedi_language_server.setup {
+	capabilities = capabilities
+}
