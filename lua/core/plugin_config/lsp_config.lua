@@ -6,7 +6,9 @@ require("mason-lspconfig").setup({
 vim.keymap.set('n', 'K', vim.lsp.buf.hover, { silent = true })
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-require("lspconfig").lua_ls.setup {}
+require("lspconfig").lua_ls.setup {
+	capabilities = capabilities
+}
 require("lspconfig").rust_analyzer.setup {}
 require("lspconfig").tsserver.setup {
 	capabilities = capabilities

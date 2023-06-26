@@ -9,3 +9,5 @@ vim.keymap.set('n','<Tab>n',':tabnew<CR>') -- opens a new empty tab
 
 
 
+--highlighting can be editten on /Users/$USERNAME/.local/share/nvim/site/pack/packer/start/nvim-treesitter/queries
+
