@@ -36,6 +36,7 @@ return require('packer').startup(function(use)
 	"windwp/nvim-autopairs",
         config = function() require("nvim-autopairs").setup {} end
 }
+
   use {
   'hrsh7th/nvim-cmp',
   'hrsh7th/cmp-nvim-lsp',
@@ -54,7 +55,7 @@ return require('packer').startup(function(use)
   	direction = 'horizontal'
 })
    end}
-  
+
   -- My plugins here
   -- use 'foo1/bar1.nvim'
   -- use 'foo2/bar2.nvim'
