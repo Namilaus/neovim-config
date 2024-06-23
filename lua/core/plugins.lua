@@ -23,8 +23,8 @@ local plugins = {
         dependencies = { 'tjdevries/colorbuddy.nvim' }},
    	'nvim-treesitter/nvim-treesitter',
 	{
-  	'nvim-telescope/telescope.nvim', tag = '0.1.1',
-	dependencies = { {'nvim-lua/plenary.nvim'}}},
+  	'nvim-telescope/telescope.nvim', tag = '0.1.8',
+	dependencies = {'nvim-lua/plenary.nvim'}},
 	{
 	"williamboman/mason.nvim",
   	"neovim/nvim-lspconfig",
