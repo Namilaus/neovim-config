@@ -12,13 +12,12 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
-   	'wbthomason/packer.nvim',
 	'folke/flash.nvim',
    	'nvim-tree/nvim-tree.lua',
    	'nvim-tree/nvim-web-devicons',
 	{
 	'nvim-lualine/lualine.nvim',
-	dependencies = { 'nvim-tree/nvim-web-devicons', opt = true }},
+	dependencies = { 'nvim-tree/nvim-web-devicons'}},
 	{	
 	'svrana/neosolarized.nvim',
         dependencies = { 'tjdevries/colorbuddy.nvim' }},
