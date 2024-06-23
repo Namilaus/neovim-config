@@ -20,7 +20,7 @@ require("lspconfig").clangd.setup {
 }
 
 
-require("lspconfig").omnisharp_mono.setup {	
+require("lspconfig").omnisharp_mono.setup {
 	capabilities = capabilities
 }
 
