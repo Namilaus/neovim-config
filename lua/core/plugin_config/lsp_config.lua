@@ -1,30 +1,32 @@
+local lspconfig = require("lspconfig")
+-- Setup Mason and its LSP config
 require("mason").setup()
 require("mason-lspconfig").setup({
-	ensure_installed = {"lua_ls","rust_analyzer","tsserver","clangd","omnisharp_mono","jedi_language_server"}
+	ensure_installed = { "lua_ls", "rust_analyzer", "tsserver", "clangd", "omnisharp_mono", "jedi_language_server" },
 })
 
-vim.keymap.set('n', 'K', vim.lsp.buf.hover, { silent = true })
-local capabilities = require('cmp_nvim_lsp').default_capabilities()
+vim.keymap.set("n", "K", vim.lsp.buf.hover, { silent = true })
 
-require("lspconfig").lua_ls.setup {
-	capabilities = capabilities
-}
-require("lspconfig").rust_analyzer.setup {}
-require("lspconfig").tsserver.setup {
-	capabilities = capabilities
-}
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
+require("lspconfig").lua_ls.setup({
+	capabilities = capabilities,
+})
+require("lspconfig").rust_analyzer.setup({
+	capabilities = capabilities,
+})
+require("lspconfig").tsserver.setup({
+	capabilities = capabilities,
+})
 
-require("lspconfig").clangd.setup {
-	capabilities = capabilities
-}
+require("lspconfig").clangd.setup({
+	capabilities = capabilities,
+})
 
+require("lspconfig").omnisharp_mono.setup({
+	capabilities = capabilities,
+})
 
-require("lspconfig").omnisharp_mono.setup {
-	capabilities = capabilities
-}
-
-
-require("lspconfig").jedi_language_server.setup {
-	capabilities = capabilities
-}
+require("lspconfig").jedi_language_server.setup({
+	capabilities = capabilities,
+})

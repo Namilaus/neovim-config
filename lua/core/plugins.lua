@@ -12,6 +12,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
+	'mhartington/formatter.nvim',
 	'folke/flash.nvim',
    	'nvim-tree/nvim-tree.lua',
    	'nvim-tree/nvim-web-devicons',
