@@ -36,6 +36,20 @@ require("formatter").setup({
 				}
 			end,
 		},
+		python = {
+			-- "formatter.filetypes.python" defines default configurations for the
+			-- "python" filetype
+			require("formatter.filetypes.python").black,
+
+			-- You can also define your own configuration
+			function()
+				return {
+					exe = "black",
+					args = { "--fast", "-" },
+					stdin = true,
+				}
+			end,
+		},
 
 		-- Use the special "*" filetype for defining formatter configurations on
 		-- any filetype
@@ -46,7 +60,6 @@ require("formatter").setup({
 		},
 	},
 })
-
 -- auto formatting by saving file
 local augroup = vim.api.nvim_create_augroup
 local autocmd = vim.api.nvim_create_autocmd
@@ -55,4 +68,3 @@ autocmd("BufWritePost", {
 	group = "__formatter__",
 	command = ":FormatWrite",
 })
-
