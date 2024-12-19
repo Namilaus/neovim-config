@@ -12,6 +12,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
+	"github/copilot.vim",
 	"mfussenegger/nvim-jdtls",
 	"mhartington/formatter.nvim",
 	"folke/flash.nvim",
